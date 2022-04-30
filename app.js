@@ -1,16 +1,11 @@
-new Vue({
+const vm = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello, World!'
+  // 関数も定義できる（返り値がセット）
+  data(){   // data: function(){
+    return {
+      message: 'Hello, World!'
+    }
   }
 })
 
-// $mountメソッドでもelオプション同様マウント可能
-  // const vm = new Vue({
-  //   data: {
-  //     message: 'Hello, World!'
-  //   }
-  // })
-
-  // vm.$mount('#app')
-
+window.vm = vm; //コンソールからvueインスタンスにアクセスできる
