@@ -8,4 +8,12 @@ const vm = new Vue({
   }
 })
 
-window.vm = vm; //コンソールからvueインスタンスにアクセスできる
+window.vm = vm; //検証ツールからvueインスタンスにアクセスできる
+
+// $watch:値の監視、値が変化した時にコールバック関数が実行される
+vm.$watch(function() {
+  return this.message   // thisはVueインスタンス(vm)
+},  function(message) { // 第二引数：値が変更されたときに呼ばれる
+  console.log('変更後の値：' + message)
+})
+
