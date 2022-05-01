@@ -1,9 +1,11 @@
-const data = ['windows','macOS', 'Linux', 'iOS', 'Android']
 const appdata = {
-  date() {
+  data() {
     return {
-      data: data
+      message: null
     }
+  },
+  mounted() {
+      this.message = 'This is sample page.'
   }
 }
 
