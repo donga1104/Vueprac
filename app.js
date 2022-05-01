@@ -1,13 +1,23 @@
-// Vue3で学習しなおし
-const appdata ={
-  data(){
-    return{
-      message: 'Hello Vue!',
-      count: 0
+
+// STOP処理
+let timer = null;
+
+function doAction() {
+  clearInterval(timer)
+}
+
+const appdata = {
+  data() {
+    return {
+      message: '',
     }
   },
+  created() {
+    this.message = 'hello!'
+    this.count = 0
+  },
   mounted(){
-    setInterval(() => {
+    timer = setInterval(() => {
       this.count++
       this.message = 'Count: ' + this.count
     }, 1000)
