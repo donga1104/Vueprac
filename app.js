@@ -1,16 +1,20 @@
+let classObj ={
+  red: true,
+  blue: false
+}
+
 const appdata = {
   data() {
     return {
-      message: null,
-      isRed: true,
-      isBlue: false
+      message: 'This is sample page',
+      classes: classObj
     }
   },
   mounted() {
     this.message = 'This is sample page.'
      setInterval(()=>{
-     this.isBlue = !this.isBlue
-     this.isRed = !this.isRed
+     this.classes.red = !this.red
+     this.classes.blue = !this.blue
      }, 1000)
   }
 }
