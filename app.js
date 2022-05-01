@@ -1,27 +1,15 @@
-
-// STOP処理
-let timer = null;
-
-function doAction() {
-  clearInterval(timer)
-}
-
+const list = ['one', 'two', 'three']
 const appdata = {
-  data() {
+  date() {
     return {
-      message: '',
+      message: `<ul>
+        <li>${list[0]}</li>
+        <li>${list[1]}</li>
+        <li>${list[2]}</li>
+      </ul>`
     }
-  },
-  created() {
-    this.message = 'hello!'
-    this.count = 0
-  },
-  mounted(){
-    timer = setInterval(() => {
-      this.count++
-      this.message = 'Count: ' + this.count
-    }, 1000)
   }
 }
 
-Vue.createApp(appdata).mount('#app')
+let app = Vue.createApp(appdata)
+app.mount('#app')
