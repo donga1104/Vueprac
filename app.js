@@ -1,7 +1,8 @@
+const data = ['windows','macOS', 'Linux', 'iOS', 'Android']
 const appdata = {
   date() {
     return {
-      num : Math.floor(Math.random() * 100)
+      data: data
     }
   }
 }
