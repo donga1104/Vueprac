@@ -1,0 +1,13 @@
+.red {
+  font-size:32pt;
+  font-weight: plain;
+  font-style: normal;
+  color: red;
+}
+
+.blue {
+  font-size: 24pt;
+  font-weight: bold;
+  font-style: italic;
+  color: blue;
+}

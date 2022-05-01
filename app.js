@@ -2,11 +2,16 @@ const appdata = {
   data() {
     return {
       message: null,
-      style:"font-size:32pt; color:red;"
+      isRed: true,
+      isBlue: false
     }
   },
   mounted() {
-      this.message = 'This is sample page.'
+    this.message = 'This is sample page.'
+     setInterval(()=>{
+     this.isBlue = !this.isBlue
+     this.isRed = !this.isRed
+     }, 1000)
   }
 }
 
