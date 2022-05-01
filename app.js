@@ -2,8 +2,15 @@
 const appdata ={
   data(){
     return{
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
+      count: 0
     }
+  },
+  mounted(){
+    setInterval(() => {
+      this.count++
+      this.message = 'Count: ' + this.count
+    }, 1000)
   }
 }
 
