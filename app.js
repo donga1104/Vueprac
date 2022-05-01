@@ -1,7 +1,8 @@
 const appdata = {
   data() {
     return {
-      message: null
+      message: null,
+      style:"font-size:32pt; color:red;"
     }
   },
   mounted() {
