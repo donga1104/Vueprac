@@ -1,13 +1,10 @@
-.red {
-  font-size:32pt;
-  font-weight: plain;
-  font-style: normal;
-  color: red;
-}
-
-.blue {
+.ok{
   font-size: 24pt;
-  font-weight: bold;
-  font-style: italic;
   color: blue;
+  padding: 5px 10px;
+  border: 2px solid red;
+}
+.ng{
+  font-size: 20pt;
+  color: gray;
 }

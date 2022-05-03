@@ -11,9 +11,27 @@
 <body>
   <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
   <div id="app" class="container">
-    <p v-bind:style="styles">
-      {{ message }}
-    </p>
+    <template v-if="flag">
+      <p>※データをテーブル表示する</p>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr><th>Name</th><th>mail</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Taro</td><td>taro@yamada</td></tr>
+          <tr><td>Hanako</td><td>hanako@yamada</td></tr>
+          <tr><td>sachiko</td><td>sahicko@yamada</td></tr>
+        </tbody>
+      </table>
+    </template>
+    <template v-else>
+      <p>※データをリスト表示する</p>
+      <ul class=""list-group>
+        <li class="list-group-item">Taroのアドレスは、taro@yamada</li>
+        <li class="list-group-item">Hanakoのアドレスは、hanako@yamada</li>
+        <li class="list-group-item">Sachikoのアドレスは、sachiko@yamada</li>
+      </ul>
+    </template>
   </div>
 
   <script src="https://unpkg.com/vue@next"></script>

@@ -6,17 +6,14 @@ let classObj ={
 const appdata = {
   data() {
     return {
-      message: 'This is sample page',
-      styles: {
-        margin: '10px',
-        padding: '5px 20px',
-        fontSize: '20pt',
-        color: 'red',
-        backgroundColor: '#fee',
-        border: '3px solid blue'
-      }
+     flag : true 
     }
   },
+  mounted() {
+    setInterval(()=>{
+      this.flag = !this.flag
+    }, 1000)
+  }
 }
 
 let app = Vue.createApp(appdata)
