@@ -12,34 +12,7 @@
   <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
   <div id="app" class="container">
       <p>{{ message }}</p>
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>mail</th>
-            <th>tel</th>
-          </tr>
-        </thead>
-        <template v-for="(item, index) in items">
-          <template v-if="index % 2 == 0">
-            <tr>
-              <td>{{ index }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.email }}</td>
-              <td>{{ item.tell }}</td>
-            </tr>
-          </template>
-          <template v-else>
-            <tr>
-              <td>xxx</td>
-              <td>xxx非公開xxx</td>
-              <td>xxx非公開xxx</td>
-              <td>xxx非公開xxx</td>
-            </tr>
-          </template>
-        </template>
-      </table>
+      <hello/>
   </div>
 
   <script src="https://unpkg.com/vue@next"></script>
