@@ -1,8 +1,3 @@
-let classObj ={
-  red: true,
-  blue: false
-}
-
 const appdata = {
   data() {
     return {
