@@ -11,7 +11,7 @@
 <body>
   <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
   <div id="app" class="container">
-      <p>※データをテーブル表示する</p>
+      <p>{{ message }}</p>
       <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -21,8 +21,8 @@
             <th>tel</th>
           </tr>
         </thead>
-        <tr v-for="(item, id) in items">
-          <td>{{ id }}</td>
+        <tr v-for="(item, key) in items">
+          <td>{{ key }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.mail }}</td>
           <td>{{ item.tel }}</td>

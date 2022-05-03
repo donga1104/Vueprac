@@ -2,12 +2,12 @@ const appdata = {
   data() {
     return {
       message : '※データをテーブル表示する',
-      items: [
-        {name:'taro', mail:'taro@mail', tel:'01-234-5678'},
-        {name:'hanako', mail:'hana@mail', tel:'99-234-5678'},
-        {name:'sachiko', mail:'sacchi@mail', tel:'01-222-5678'},
-        {name:'jiro', mail:'konto@mail', tel:'43-3232-5678'},
-      ]
+      // オブジェクトでv-for
+      items:{
+        taro:{mail: 'taro@mail', tel: '1234-22'},
+        rota:{mail: 'ro@mail', tel: '123e-22'},
+        pyon:{mail: 'pyun@mail', tel: '1224-22'},
+      }
     }
   }
 }
