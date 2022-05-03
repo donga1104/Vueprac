@@ -21,5 +21,3 @@ const appdata = {
 
 let app = Vue.createApp(appdata)
 app.mount('#app')
-
-// Mac切り替えテスト
