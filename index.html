@@ -21,12 +21,20 @@
             <th>tel</th>
           </tr>
         </thead>
-        <tr v-for="(item, key) in items">
-          <td>{{ key }}</td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.mail }}</td>
-          <td>{{ item.tel }}</td>
-        </tr>
+        <template v-for="(item, index) in items">
+          <tr v-if="index % 2 == 0">
+            <td>{{ index }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.tell }}</td>
+          </tr>
+          <tr v-else>
+            <td>xxx</td>
+            <td>xxx非公開xxx</td>
+            <td>xxx非公開xxx</td>
+            <td>xxx非公開xxx</td>
+          </tr>
+        </template>
       </table>
   </div>
 
