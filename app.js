@@ -10,7 +10,13 @@ let app = Vue.createApp(appdata)
 
 // コンポーネントの作成
 app.component('hello', {
-  template : '<p class="alert alert-primary">Hello!</p>'
+  data() {
+    return{
+      message: 'これは新しいメッセージです。'
+    }
+  },
+  template: '<p class="alert alert-primary">{{ message }}</p>'
 })
 
+// マウントは最後
 app.mount('#app')
