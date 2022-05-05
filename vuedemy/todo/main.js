@@ -7,7 +7,8 @@ const app = Vue.createApp({
         addItem: function(event) {
             if(this.newItem === '')return // 空文字は追加しない
             let todo = {
-                item : this.newItem
+                item : this.newItem,
+                isDone : false
             }
             this.todos.push(todo)
             this.newItem = ''   // 入力欄をクリアする
