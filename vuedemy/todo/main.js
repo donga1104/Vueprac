@@ -5,11 +5,11 @@ const app = Vue.createApp({
     }),
     methods: {
         addItem: function(event) {
-            console.log('log')
             let todo = {
                 item : this.newItem
             }
             this.todos.push(todo)
+            this.newItem = ''   // 入力欄をクリアする
         }
     }
 })
