@@ -5,6 +5,7 @@ const app = Vue.createApp({
     }),
     methods: {
         addItem: function(event) {
+            if(this.newItem === '')return // 空文字は追加しない
             let todo = {
                 item : this.newItem
             }
