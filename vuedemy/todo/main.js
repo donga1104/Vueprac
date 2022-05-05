@@ -1,12 +1,8 @@
 const app = Vue.createApp({
     data:() => ({
-        message : 'hello'
-    }),
-    methods: {
-        clickHandler: function(event) {
-            this.message = this.message.split('').reverse().join('') // 文字列反転
-        }
-    }
+        // 通常xss対策でタグはそのまま表示されるが、v-htmlでタグを記述可能
+        message : 'hello <span style="color:red"> red </span>'
+    })
 })
 
 app.mount('#app')
