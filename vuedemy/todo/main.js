@@ -1,17 +1,10 @@
 const app = Vue.createApp({
     data:() => ({
-
+        message: 'hello,Vue.js'
     }),
-    computed: {
-        computedNumber: function() {
-            console.log('computed') // ログが１回
-            return Math.random()
-        }
-    },
-    methods: {
-        methodsNumber: function() {
-            console.log('methods') // ログが３回
-            return Math.random()
+    watch: {
+        message: function(newValue, oldValue) {
+            console.log('new: %s, old: %s', newValue, oldValue)
         }
     }
 })
