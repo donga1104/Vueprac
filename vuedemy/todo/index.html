@@ -9,6 +9,14 @@
 </head>
 <body>
     <div id="app">
+        <p>base price: <input type="text" v-model="basePrice"></p>
+        <p>tax included price: <input type="text" v-model="taxIncludedPrice"></p>
+    </div>
+<script src="http://unpkg.com/vue@3.1.5"></script>
+<script src="./main.js"></script>
+</body>
+</html>
+
 <!-- 
         computed...プロパティなので()不要
         methods...メソッドなので()必要
@@ -19,10 +27,3 @@
         comuputed...キャッシュあり
         methods...キャッシュなし
 -->
-      <p>{{ reversedMessage }}</p>
-      <p>{{ reversedMessageMethod() }}</p>
-    </div>
-<script src="http://unpkg.com/vue@3.1.5"></script>
-<script src="./main.js"></script>
-</body>
-</html>
