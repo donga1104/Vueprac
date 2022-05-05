@@ -11,8 +11,9 @@
     <div id="app">
         <h2>TodoList</h2>
         <form v-on:submit.prevent>  <!-- submitを無効 -->
-            <input type="text">
+            <input type="text" v-model="newItem">
             <button v-on:click="addItem">add</button>
+            <pre>{{ $data }}</pre> <!-- デバッグ用 -->
         </form>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
