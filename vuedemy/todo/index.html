@@ -9,14 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <!-- ハイフンがある場合はシングルコートで囲む必要がある -->
-        <p>hello,
-            <span class="bg-gray text-blue"
-             v-bind:class="{ large: isLarge, 'text-danger': hasError }">
-             Vue.js
-            </span>
-        </p>
-        
+       <p>hello,<span v-bind:class="largeClass">Vue.js</span></p>
+       <p>hello,<span v-bind:class="[largeClass, dangerClass]">Vue.js</span></p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
