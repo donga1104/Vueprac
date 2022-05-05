@@ -5,28 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">    
-    <title>リアルタイムサーチ(api)|Vue.js</title>
+    <title>クラス、スタイルのデータバインディング|Vue.js</title>
 </head>
 <body>
     <div id="app">
-        <p>
-            <input type="text" v-model="keyword">
-        </p>
-
-        <p>
-            {{ message }}
-        </p>
-
-        <ul>
-            <li v-for="item in items">
-                <!-- apiドキュメントを参照 -->
-                <a v-bind:href="item.url" target="_blank">
-                    {{ item.title }}
-                </a>
-                likes: {{ item.likes_count}}
-            </li>
-        </ul>
-
+        <p>hello,<span v-bind:class="{ large: isLarge }">Vue.js</span></p>
+        <p>hello,<span :class="{ large: isLarge }">Vue.js省略記法</span></p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
