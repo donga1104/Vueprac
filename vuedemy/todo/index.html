@@ -9,8 +9,18 @@
 </head>
 <body>
     <div id="app">
-      <p>{{ message.split('').reverse().join('') }}</p>
+<!-- 
+        computed...プロパティなので()不要
+        methods...メソッドなので()必要
+
+        computed... getter,setter
+        methods... getter
+
+        comuputed...キャッシュあり
+        methods...キャッシュなし
+-->
       <p>{{ reversedMessage }}</p>
+      <p>{{ reversedMessageMethod() }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./main.js"></script>
