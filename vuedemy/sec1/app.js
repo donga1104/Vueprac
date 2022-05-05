@@ -1,8 +1,11 @@
 const app = Vue.createApp({
-    // options
     data: () => ({
-        message : 'hello,Vue.js',
-    })
+        now : '-'
+    }),
+    methods: {
+        onClick: function() {
+            this.now = new Date().toLocaleString();
+        }
+    }
 }).mount('#app');
 // app.mount('#app');
-
