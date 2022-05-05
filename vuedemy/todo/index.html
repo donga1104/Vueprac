@@ -9,11 +9,10 @@
 </head>
 <body>
     <div id="app">
-        <h2>js式が使える</h2>
-        <p>{{ message }}</p>
-        <p>{{ number + 1 }}</p>
-        <p>{{ message.split('').reverse().join('') }}</p>
-        <p>{{ ok ? 'yes' : 'no' }}</p>
+      <a v-bind:href="url">link1</a>
+      <br>
+      <a :href="url">link2※省略記法</a>
+
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./main.js"></script>

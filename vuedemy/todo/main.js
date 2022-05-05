@@ -1,8 +1,6 @@
 const app = Vue.createApp({
     data:() => ({
-        message : 'hello',
-        number: 100,
-        ok: true
+        url : 'https://www.google.co.jp/'
     })
 })
 
