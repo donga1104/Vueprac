@@ -1,8 +1,4 @@
-#app li {
-    /* ・を非表示 */
-    list-style: none;
-}
-
-#app li > span.done {
-    text-decoration: line-through;
+/* vue.jsのルール[v-cloak] */
+[v-cloak] {
+    display: none;
 }

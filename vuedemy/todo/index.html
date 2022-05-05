@@ -9,9 +9,11 @@
 </head>
 <body>
     <div id="app">
-        <p v-html="message"></p> 
+        <p v-cloak>{{ message }}</p> 
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./main.js"></script>
 </body>
 </html>
+
+<!-- ちらつき対策：インスタンスのコンパイルが終了するまで、該当要素をcssで非表示にする v-cloak -->
