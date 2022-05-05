@@ -9,23 +9,11 @@
 </head>
 <body>
     <div id="app">
-     <p>{{ message }}</p>
-     <p>
-         <input type="text" v-model="message">
-     </p>
-    </div>
+    <h1>単位変換アプリ</h1>
+    <p><input type="text" v-model="km">km</p>
+    <p><input type="text" v-model="m">m</p>
+</div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./main.js"></script>
 </body>
 </html>
-
-<!-- 
-        computed...プロパティなので()不要
-        methods...メソッドなので()必要
-
-        computed... getter,setter
-        methods... getter
-
-        comuputed...キャッシュあり
-        methods...キャッシュなし
--->
