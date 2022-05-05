@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">    
-    <title>テンプレート構文|Vue.js</title>
+    <title>算出プロパティ|Vue.js</title>
 </head>
 <body>
     <div id="app">
-      <a v-bind:href="url">link1</a>
-      <br>
-      <a :href="url">link2※省略記法</a>
-
+      <p>{{ message.split('').reverse().join('') }}</p>
+      <p>{{ reversedMessage }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./main.js"></script>
