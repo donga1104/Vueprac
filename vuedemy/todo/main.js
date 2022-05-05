@@ -1,20 +1,28 @@
 const app = Vue.createApp({
     data:() => ({
-        km: 0,
-        m: 0
+        firstName: '',
+        lastName: '',
+        fullName: ''
     }),
     watch: {
-        km: function(value) {
-            console.log(value)
-            this.km = value
-            this.m = value * 1000
+        firstName: function(value) {
+            this.fullName = value + ' ' + this.lastName
         },
-        m: function(value) {
-            this.km = value / 1000
-            this.m = value
+        lastName: function(value) {
+            this.fullName = this.firstName + ' ' + value
         }
-
     }
+    // 同じ処理を算出プロパティで確認：シンプルで書きやすい
+    // data:() => ({
+    //     firstName: '',
+    //     lastName: '',
+    // }),
+    // computed: {
+    //     fullName: function() {
+    //         return this.firstName + ' ' + this.lastName
+    //     }
+    // }
+
 })
 
 app.mount('#app')
