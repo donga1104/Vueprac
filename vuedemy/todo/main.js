@@ -1,28 +1,24 @@
 const app = Vue.createApp({
     data:() => ({
-        firstName: '',
-        lastName: '',
-        fullName: ''
+        colors: [
+            {name: 'red'},
+            {name: 'blue'},
+            {name: 'green'},
+        ]
     }),
     watch: {
-        firstName: function(value) {
-            this.fullName = value + ' ' + this.lastName
-        },
-        lastName: function(value) {
-            this.fullName = this.firstName + ' ' + value
+        colors: {
+            handler: function(newValue, oldValue) {
+                console.log('update')
+            },
+            deep: true // ネストされた内容も監視する（console.log('update')が表示される
+        }
+    },
+    methods: {
+        onClick: function(event) {
+            this.colors[1].name = 'white'
         }
     }
-    // 同じ処理を算出プロパティで確認：シンプルで書きやすい
-    // data:() => ({
-    //     firstName: '',
-    //     lastName: '',
-    // }),
-    // computed: {
-    //     fullName: function() {
-    //         return this.firstName + ' ' + this.lastName
-    //     }
-    // }
-
 })
 
 app.mount('#app')
