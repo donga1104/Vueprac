@@ -1,6 +1,8 @@
 const app = Vue.createApp({
     data:() => ({
-        message : 'hello'
+        message : 'hello',
+        number: 100,
+        ok: true
     })
 })
 
