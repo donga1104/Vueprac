@@ -12,7 +12,12 @@ const app = Vue.createApp({
             }
             this.todos.push(todo)
             this.newItem = ''   // 入力欄をクリアする
+        },
+        deleteItem: function(index) {
+            // console.log('delete is ' + index)    削除対象はindexで区別
+            this.todos.splice(index, 1)
         }
+
     }
 })
 
