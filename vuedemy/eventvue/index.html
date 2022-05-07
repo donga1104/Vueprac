@@ -9,7 +9,11 @@
 <body>
     <div id="app">
         <p>{{ counter }}</p>
+        
+        <!-- js式で直接記述 -->
         <button v-on:Click="counter++">Count Up</button>
+        <!-- methodsで定義したものを記述 -->
+        <button v-on:Click="clickHandler">Count Up</button>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
