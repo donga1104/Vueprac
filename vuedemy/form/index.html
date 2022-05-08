@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app">
-       <input type="text" v-model="message" value="属性は無視される">
+        {{ message }}
+
+        <textarea v-model="message"></textarea>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
