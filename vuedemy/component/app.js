@@ -1,14 +1,21 @@
-//ルートvueインスタンスが作成される前に定義⇨vueインスタンスのcomponentsオプションに登録する
-const helloComponent = {
-    template: '<p>hello</p>'
+const buttonCounter = {
+    template: '<div><span>count: </span><button v-on:click="countUp">{{ count }}</button></div>',
+    data:() => ({
+        count: 0
+    }),
+    methods: {
+        countUp: function(event) {
+            this.count++
+        }
+    }
 }
 
 const app = Vue.createApp({
     data: () => ({
-        message: ''
+        
     }),
     components: {
-        'hello-component': helloComponent
+        'button-counter': buttonCounter
     }
 })
 
