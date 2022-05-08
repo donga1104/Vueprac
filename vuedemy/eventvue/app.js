@@ -3,9 +3,10 @@ const app = Vue.createApp({
         message: ''
     }),
     methods: {
-        clickHandler: function(message) {
+        clickHandler: function($event,message) {
             // console.log(message)    // Vue.js
             this.message = message
+            console.log($event)
         }
     }
 })
