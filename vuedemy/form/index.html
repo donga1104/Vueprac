@@ -8,13 +8,14 @@
 </head>
 <body>
     <div id="app">
+        <input type="radio" id="red" value="Red" v-model="color">
         <label for="red">Red</label>
-        <input type="checkbox" id="red" value="Red" v-model="colors">
+        <input type="radio" id="green" value="Green" v-model="color">
         <label for="red">Green</label>
-        <input type="checkbox" id="red" value="Green" v-model="colors">
+        <input type="radio" id="blue" value="Blue" v-model="color">
         <label for="red">Blue</label>
-        <input type="checkbox" id="red" value="Blue" v-model="colors">
-        <p>{{ colors }}</p>
+
+        <p>{{ color }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
@@ -22,9 +23,8 @@
 </html>
 
 <!-- 
-チェックボックス
+ラジオボタン
 
-単体...boolean値
-複数...配列
+デフォルトの値は文字列
 
 -->

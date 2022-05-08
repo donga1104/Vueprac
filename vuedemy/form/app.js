@@ -1,6 +1,6 @@
 const app = Vue.createApp({
     data: () => ({
-        colors: []
+        color: '' // デフォルトは文字列
     }),
 })
  app.mount('#app');
