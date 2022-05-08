@@ -1,6 +1,6 @@
 const app = Vue.createApp({
     data: () => ({
-        selected: '' // デフォルトは文字列
+        selected: []
     }),
 })
  app.mount('#app');

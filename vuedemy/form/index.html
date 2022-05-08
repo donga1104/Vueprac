@@ -8,8 +8,7 @@
 </head>
 <body>
     <div id="app">
-        <select v-model="selected">
-            <option disabled value="">Please select one</option>
+        <select v-model="selected" multiple>
             <option>red</option>
             <option>green</option>
             <option>blue</option>
@@ -22,8 +21,8 @@
 </html>
 
 <!-- 
-セレクトボックス単体
+セレクトボックス複数
 
-デフォルトの値は文字列
+デフォルトの値は配列
 
 -->
