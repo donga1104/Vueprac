@@ -8,11 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model.trim="message">
-        <br>
-        <input type="text" v-model="message">
-        <pre>{{$data}}</pre>
+       <!-- type=numberでも文字列を返す為、文字列で＋となってしまう
+       <input type="number" v-model="age">
+       {{ age + 10 }} -->
 
+       <!-- 入力値を数値型に型変換してからデータに代入できるようになる -->
+       <input type="number" v-model.number="age">
+       {{ age + 10 }}
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
