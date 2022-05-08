@@ -8,8 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <label for="checkbox">{{ checked }}</label>
-        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="red">Red</label>
+        <input type="checkbox" id="red" value="Red" v-model="colors">
+        <label for="red">Green</label>
+        <input type="checkbox" id="red" value="Green" v-model="colors">
+        <label for="red">Blue</label>
+        <input type="checkbox" id="red" value="Blue" v-model="colors">
+        <p>{{ colors }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
