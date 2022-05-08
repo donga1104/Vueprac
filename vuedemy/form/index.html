@@ -8,11 +8,18 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
-
-        <textarea v-model="message"></textarea>
+        <label for="checkbox">{{ checked }}</label>
+        <input type="checkbox" id="checkbox" v-model="checked">
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
 </body>
 </html>
+
+<!-- 
+チェックボックス
+
+単体...boolean値
+複数...配列
+
+-->
