@@ -8,14 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <input type="radio" id="red" value="Red" v-model="color">
-        <label for="red">Red</label>
-        <input type="radio" id="green" value="Green" v-model="color">
-        <label for="red">Green</label>
-        <input type="radio" id="blue" value="Blue" v-model="color">
-        <label for="red">Blue</label>
-
-        <p>{{ color }}</p>
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>red</option>
+            <option>green</option>
+            <option>blue</option>
+        </select>
+        <p>{{ selected }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
@@ -23,7 +22,7 @@
 </html>
 
 <!-- 
-ラジオボタン
+セレクトボックス単体
 
 デフォルトの値は文字列
 
