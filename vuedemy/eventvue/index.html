@@ -7,10 +7,9 @@
     <title>イベントハンドリング | Udemy</title>
 </head>
 <body>
-    <div id="app">
-        <p>{{ counter }}</p>
-        
-        <button v-on:Click="clickHandler" id="btn">Count Up</button>
+    <div id="app"> 
+        <button v-on:Click="clickHandler('Vue.js')">Click</button>
+        <p>{{ message }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
