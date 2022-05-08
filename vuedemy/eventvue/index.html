@@ -9,6 +9,8 @@
 <body>
     <div id="app"> 
         <button v-on:click.once="clickHandler">Now</button>
+        <!-- v-on省略記法 -->
+        <button @click.once="clickHandler">Now</button>
         <p>{{ message }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
