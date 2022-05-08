@@ -8,12 +8,9 @@
 </head>
 <body>
     <div id="app">
-        <select v-model="selected" multiple>
-            <option>red</option>
-            <option>green</option>
-            <option>blue</option>
-        </select>
-        <p>{{ selected }}</p>
+        <!-- .lazy 文字列入力の確定後にバインディングされる -->
+        <input type="text" v-model.lazy="message">
+        <p>{{ message }}</p>
     </div>
 <script src="http://unpkg.com/vue@3.1.5"></script>
 <script src="./app.js"></script>
