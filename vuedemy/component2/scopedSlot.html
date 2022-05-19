@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-slot(スコープ) | Vue.js</title>
+    <style>
+        .parent{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px red solid;
+        }
+        .child{
+            width: 30%;
+            margin: 0 auto;
+            border: 1px blue solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="parent">
+        <my-com class="child">
+            <!-- {{ member.name }} ではとれない -->
+
+            <template v-slot:default="player">
+                <!-- {{ player }} ⇨  "member": { "name": "山川", "height": "170cm", "hobby": "カラオケ" } } -->
+                {{ player.member.name }}                
+            </template>
+        </my-com>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+    <script>
+        let myCom ={ // v-bindでも子供の方で紐づけてあげる
+            template:`<div>
+                <slot :member="member">ここが差し代わる</slot>
+                </div>`
+            ,
+            data(){
+                return{
+                    member:{
+                        name:'山川',
+                        height:'170cm',
+                        hobby:'カラオケ'
+                    }
+                }
+            }
+        }
+
+        let app = new Vue({
+            el: '#app',
+            data(){
+                return {
+                }
+            },
+            components:{
+                myCom
+            }
+        })
+    </script>
+</body>
+</html>
