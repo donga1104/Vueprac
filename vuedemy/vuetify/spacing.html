@@ -5,7 +5,7 @@
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.5.55/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.3.10/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title> | Vuetify</title>
+  <title> Spacing | Vuetify</title>
   <style>
     .red-b{
       border:red 1px solid;
@@ -18,7 +18,21 @@
 <body>
   <div id="app">
     <v-app>
-      
+      <v-main>
+        <v-app-bar app>
+          ヘッダー
+        </v-app-bar>
+        <v-container fluid>
+          <v-row class="blue-b">
+            <v-col class=" my-5 red-b" cols="12" md="4">あ</v-col>
+            <v-col cols="12" md="4">い</v-col>
+            <v-col cols="12" md="4">う</v-col>
+          </v-row>
+        </v-container>
+      </v-main>
+      <v-footer>
+        フッター
+      </v-footer>
     </v-app>
   </div>
 
