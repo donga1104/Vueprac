@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="red-b">
     テストです
     {{ testData }}
   </div>
@@ -16,6 +16,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.red-b{
+  border: 1px red solid;
+}
 </style>
