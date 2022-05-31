@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app" class="parent">
-        <emit-test @custom-event="parentMethod" class="child">
+        <emit-test @custom-event="parentMethod" class="child"> <!-- l39:カスタムイベント -->
 
         </emit-test>
 
@@ -51,7 +51,7 @@
                 }
             },
             methods:{
-                parentMethod(e){
+                parentMethod(e){    // 子供の方からイベントを受け取ったらこのメソッドが実行される
                     console.log(e)
                 }
             }

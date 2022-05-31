@@ -22,9 +22,10 @@
 
 <body>
     <div id="app" class="parent">
-        <custom-input :value="parentValue" @input="parentValue = $event" class="child"> <!-- v-modelで書き換えの場合はv-model="parentValue"でok -->
+        <custom-input :value="parentValue" @input="parentValue = $event" class="child"> 
+<!-- v-modelで書き換えの場合はv-model="parentValue"でok -->
         </custom-input>
-        {{ parentValue }}
+        {{ parentValue }} <!-- 親側の値 -->>
     </div>
 
     <script>
