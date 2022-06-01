@@ -22,7 +22,7 @@
     <div id="app" class="parent">
         <array-test v-for="member in members"
             :key="member.name"
-            :member="member"
+            :item="member"
             class="child">
 
         </array-test>
@@ -32,12 +32,12 @@
 
         let arrayTest = {
             props:{
-                member:{
+                item:{
                     type:Object
                 }
             },
             template:`<div>
-                <p>{{ member.name }}</p>  <!-- propsのオブジェクト名 -->
+                <p>{{ item.name }}</p>  <!-- propsのオブジェクト名 -->
                 </div>`
         }
 
