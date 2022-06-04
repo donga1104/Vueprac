@@ -18,6 +18,16 @@ export default {
     goToHome(){
       this.$router.push('/')  // homeに戻る
     }
+  },
+  // コンポーネント単位のナビゲーションガ-ド
+  // 「本当にこのページを離れますか？」
+  beforeRouteLeave(to, from, next){
+    const checkLeave = window.confirm('本当にこのページを離れますか？')
+    if(checkLeave){
+      next()
+    }else{
+      next(false)
+    }
   }
 }
 </script>

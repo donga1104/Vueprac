@@ -50,7 +50,11 @@ const routes = [
   {
     path:'/item/:id',
     name:'Item',
-    component: ItemView
+    component: ItemView,
+    // ルート単位でナビゲーションガード
+        // beforeEnter:(to, from, next)=>{
+        //
+        // }
   },
   {
     path:'*',  // 設定しているパス以外の全て
@@ -79,6 +83,13 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+// グローバルパターンのナビゲーションガード
+router.beforeEach((to,from,next)=>{
+  console.log(to)
+  console.log(from)
+  next()
 })
 
 export default router
