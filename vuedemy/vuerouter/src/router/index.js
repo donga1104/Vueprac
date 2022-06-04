@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BookList from '../views/BookList.vue'
 import BookDetail from '@/components/BookDetail.vue'
-import Item from '../views/Item.vue'
+import ItemView from '../views/ItemView.vue'
 
 Vue.use(VueRouter)
 
@@ -39,7 +39,7 @@ const routes = [
   {
     path:'/item/:id',
     name:'Item',
-    component: Item
+    component: ItemView
   },
 ]
 
