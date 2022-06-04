@@ -41,6 +41,10 @@ const routes = [
     name:'Item',
     component: ItemView
   },
+  {
+    path:'*',  // 設定しているパス以外の全て
+    redirect:'/'  // 存在しないパスの場合はルートに戻る 
+  }
 ]
 
 const router = new VueRouter({
