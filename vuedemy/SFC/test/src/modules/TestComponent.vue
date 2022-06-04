@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'TestComponent',
+  name: 'TestComponent',  // お約束。ファイル名を記述
   data(){
     return{
       testData:'テストdataです'

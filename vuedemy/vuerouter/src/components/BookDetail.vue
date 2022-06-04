@@ -16,11 +16,11 @@ export default {
   },
   data(){
     return{
-      bookIndex: this.$route.params.id -1,
+      bookIndex: this.$route.params.id,
       books:[
-        {id:1, title:'タイトル1', content:'本の内容1'},
-        {id:2, title:'タイトル2', content:'本の内容2'},
-        {id:3, title:'タイトル3', content:'本の内容3'}
+        {id:0, title:'タイトル1', content:'本の内容1'},
+        {id:1, title:'タイトル2', content:'本の内容2'},
+        {id:2, title:'タイトル3', content:'本の内容3'}
       ]
     }
   },

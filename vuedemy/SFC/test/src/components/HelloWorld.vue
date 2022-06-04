@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HelloWorld', // 頭は大文字、nameとファイル名も合わせる。App.vueへexport
   props: {
     msg: String
   }

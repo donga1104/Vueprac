@@ -12,11 +12,11 @@ export default {
   name:'AboutView',
   methods:{
     checkRouteInfo(){
-      console.log(this.$route.path)
+      console.log(this.$route.path) // コンポーネントの中であれば、thisが必要となる
       console.log(this.$router)
     },
     goToHome(){
-      this.$router.push('/')
+      this.$router.push('/')  // homeに戻る
     }
   }
 }

@@ -21,8 +21,7 @@
 <body>
     <div id="app" class="parent">
         <my-com class="child">
-            <!-- {{ member.name }} ではとれない -->
-
+            <!-- {{ member.name }} ではとれない(マスタッシュ構文) -->
             <template v-slot:default="player">
                 <!-- {{ player }} ⇨  "member": { "name": "山川", "height": "170cm", "hobby": "カラオケ" } } -->
                 {{ player.member.name }}                

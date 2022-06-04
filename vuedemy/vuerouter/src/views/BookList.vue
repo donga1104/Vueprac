@@ -14,19 +14,20 @@ export default {
   name:'BookList',
   data(){
     return{
-      bookIndex: -1,
+      bookIndex: 0,
       books:[
-        {id:1, title:'タイトル1', content:'本の内容1'},
-        {id:2, title:'タイトル2', content:'本の内容2'},
-        {id:3, title:'タイトル3', content:'本の内容3'}
+        {id:0, title:'タイトル1', content:'本の内容1'},
+        {id:1, title:'タイトル2', content:'本の内容2'},
+        {id:2, title:'タイトル3', content:'本の内容3'}
       ]
     }
   },
   methods:{
     showBookDetail(id){
-      this.bookIndex = id - 1
-      console.log(this.bookIndex)
+      this.bookIndex = id
+      // console.log(this.bookIndex)
       this.$router.push({
+        // 名前付きルート（パラメータを渡す時はpathでなくnameで設定する仕様？
         name:'Book', // router/index.jsのl30周辺
         params:{
           id: this.books[this.bookIndex].id,
