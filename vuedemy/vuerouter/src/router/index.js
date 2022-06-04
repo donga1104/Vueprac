@@ -5,6 +5,10 @@ import BookList from '../views/BookList.vue'
 import BookDetail from '@/components/BookDetail.vue'
 import ItemView from '../views/ItemView.vue'
 import NotFound from '@/components/NotFound.vue'
+import User from '@/views/User.vue'
+import UserProfile from '@/components/UserProfile.vue'
+import UserPost from '@/components/UserPost.vue'
+
 
 Vue.use(VueRouter)
 
@@ -44,9 +48,24 @@ const routes = [
   },
   {
     path:'*',  // 設定しているパス以外の全て
-    // redirect:'/'  // 存在しないパスの場合はルートに戻る 
-    name: 'name',
+    // redirect:'/'  // 存在しないパスの場合はルートに戻る（方法１） 
+    name: 'name', // 404エラーページを作成し遷移させる（方法２）
     component: NotFound 
+  },
+  {
+    path:'/user',
+    // name を書くとネストの場合はエラーとなる
+    component: User,
+    children:[  // ネスト
+      {
+        path:'profile',
+        component: UserProfile
+      },
+      {
+        path:'post',
+        component: UserPost
+      }
+    ]
   }
 ]
 
