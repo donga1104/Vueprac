@@ -12,7 +12,8 @@
     <div class="blue-b">  <!-- 青枠がrouter-viewの範囲（目印） -->
       <router-view/>
     </div>
-
+      <!-- router-viewは複数使うことができ、名前を指定することができる。(名前がないとdefault) -->
+      <router-view name="sub"/>
 
   </div>
 </template>

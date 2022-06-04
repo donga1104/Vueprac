@@ -1,3 +1,4 @@
+// コンポーネント
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
@@ -8,6 +9,7 @@ import NotFound from '@/components/NotFound.vue'
 import User from '@/views/User.vue'
 import UserProfile from '@/components/UserProfile.vue'
 import UserPost from '@/components/UserPost.vue'
+import HomeSub from  '@/components/HomeSub.vue'
 
 
 Vue.use(VueRouter)
@@ -16,7 +18,11 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    // componentsで複数系
+    components: {
+      default: HomeView,
+      sub: HomeSub
+    }
   },
   {
     path: '/about',
