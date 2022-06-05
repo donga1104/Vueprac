@@ -5,9 +5,26 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {  // 初期値（data()の扱いに似ている）
-    count:0
+    count:0,
+    users:[
+      {id:1, name:'田中', isVisible: true},
+      {id:2, name:'マルクス', isVisible: false},
+      {id:3, name:'闘莉王', isVisible: true}
+    ]
   },
   getters: {
+    // isVisibleがtrueの場合表示する
+    visibleUsers(state){
+      // gettersはreturnが必要
+      return state.users.filter( user => user.isVisible)
+    },
+    // ----- アロー関数の書き方 -----
+      // visibleUsers: state => state.Users.filter(user => user.isVisible)
+
+    // ----- メソッドスタイルの書き方 -----
+    getUserById: state => id =>{  // 指定のidを表示させる
+      return state.users.find( user => user.id === id)
+    }
   },
   mutations: {
     increment(state){
